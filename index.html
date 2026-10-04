@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lastikçi Mahmut Gümüştaş - Yüreğir Adana Lastik Tamiri & Yol Yardım</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #ffb703;
+            --primary-dark: #fb8500;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --whatsapp-color: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- Header / Navigation --- */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .call-btn-nav {
+            background: var(--primary);
+            color: #000;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .call-btn-nav:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 160px 1.5rem 80px 1.5rem;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(255, 183, 3, 0.1) 0%, rgba(15, 23, 42, 1) 70%);
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-badge {
+            background: rgba(255, 183, 3, 0.15);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            max-width: 800px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-main {
+            background: var(--primary);
+            color: #000;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(255, 183, 3, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-main:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(251, 133, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* --- Global Section Style --- */
+        section {
+            padding: 80px 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* --- Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .service-card i {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- Features / Why Us --- */
+        .why-us {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-item i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            background: rgba(255, 183, 3, 0.1);
+            padding: 12px;
+            border-radius: 12px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* --- Contact Section --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+        }
+
+        .contact-card i {
+            font-size: 1.8rem;
+            color: #000;
+            background: var(--primary);
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.95rem;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Floating WhatsApp Button --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-color);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+            color: #fff;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #090d16;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-main, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-car-battery"></i>
+                <span>Lastikçi Mahmut</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+                <li><a href="#neden-biz">Neden Biz?</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <a href="tel:05365691363" class="call-btn-nav">
+                <i class="fa-solid fa-phone"></i>
+                <span>0536 569 13 63</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">
+            <i class="fa-solid fa-clock"></i> 7/24 Kesintisiz Lastik & Yol Yardım
+        </div>
+        <h1>Yolda Mı Kaldınız? <span>Lastikçi Mahmut</span> Yanınızda!</h1>
+        <p>Adana Yüreğir ve çevresinde binek, ticari tüm araçlarınız için yerinde ve dükkanımızda profesyonel lastik tamiri, değişimi ve yol yardım hizmeti sunuyoruz.</p>
+        <div class="hero-buttons">
+            <a href="tel:05365691363" class="btn-main">
+                <i class="fa-solid fa-phone-volume"></i> Hemen Arayın
+            </a>
+            <a href="https://wa.me/905365691363?text=Merhaba%20Mahmut%20Usta,%20konumuma%20lastik%20tamiri%20i%C3%A7in%20yol%20yard%C4%B1m%20istiyorum." target="_blank" class="btn-secondary">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Konum At
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="hizmetler">
+        <div class="section-title">
+            <h2>Hizmetlerimiz</h2>
+            <p>Siz yolda kalmayın diye hızlı, güvenilir ve uygun fiyatlı çözümler sağlıyoruz.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-truck-pickup"></i>
+                <h3>Mobil Yol Yardım</h3>
+                <p>Aracınızın bulunduğu yere gelerek lastik değişimi, yama ve tamir işlemlerinizi anında gerçekleştiriyoruz.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-compact-disc"></i>
+                <h3>Lastik Tamiri & Yama</h3>
+                <p>Patlayan veya hava kaçıran lastiklerinizi profesyonel ekipmanlarımızla güvenle tamir ediyoruz.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <h3>Sökme & Takma</h3>
+                <p>Mevsimlik lastik değişimlerinizi jantlarınıza zarar vermeden özenle yapıyoruz.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-gauge-high"></i>
+                <h3>Hava & Basınç Kontrolü</h3>
+                <p>Lastiklerinizin hava basınçlarını ideal seviyeye getirerek güvenli sürüş sağlıyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="neden-biz">
+        <div class="why-us">
+            <div class="section-title" style="margin-bottom: 2rem;">
+                <h2>Neden Bizi Tercih Etmelisiniz?</h2>
+                <p>Müşteri memnuniyeti ve güvenli sürüş önceliğimizdir.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fa-solid fa-bolt"></i>
+                    <div>
+                        <h4>Hızlı Müdahale</h4>
+                        <p>Adana Yüreğir bölgesinde çağrınıza en kısa sürede ulaşıyoruz.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <div>
+                        <h4>Uygun Fiyat</h4>
+                        <p>Kaliteli işçiliği ekonomik ve adil fiyatlarla sunuyoruz.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-wrench"></i>
+                    <div>
+                        <h4>Usta İşçilik</h4>
+                        <p>Yılların verdiği tecrübe ile işimizi titizlikle yapıyoruz.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-headset"></i>
+                    <div>
+                        <h4>7/24 İletişim</h4>
+                        <p>Gece gündüz fark etmeksizin bir telefon kadar yakınınızdayız.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="iletisim">
+        <div class="section-title">
+            <h2>İletişim & Adres</h2>
+            <p>Dükkanımıza uğrayabilir veya hemen arayarak yol yardım isteyebilirsiniz.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="contact-info">
+                    <h3>Adresimiz</h3>
+                    <p>Serinevler Mahallesi Şehit Er Jandarma Mustafa Göksal Caddesi Yüreğir / Adana</p>
+                    <a href="https://maps.google.com/?q=Serinevler+Mahalle+Sehit+Er+Jandarma+Mustafa+Goksal+Caddesi+Yuregir+Adana" target="_blank" class="contact-link">
+                        <i class="fa-solid fa-map-location-dot"></i> Haritada Gör
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-phone"></i>
+                <div class="contact-info">
+                    <h3>Telefon</h3>
+                    <p>7/24 Kesintisiz Ulaşım</p>
+                    <a href="tel:05365691363" class="contact-link" style="font-size: 1.1rem;">
+                        0536 569 13 63
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/905365691363?text=Merhaba%20Mahmut%20Usta,%20lastik%20tamiri%20ve%20yol%20yard%C4%B1m%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="WhatsApp İletişim">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Lastikçi Mahmut Gümüştaş. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
